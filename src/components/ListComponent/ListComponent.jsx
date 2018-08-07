@@ -1,0 +1,12 @@
+import React, { Component } from 'react';
+
+class ListComponent extends Component {
+  render() {
+    return (
+      <div className="ListComponent">
+      </div>
+    );
+  }
+}
+
+export default ListComponent;

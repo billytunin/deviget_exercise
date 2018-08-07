@@ -1,3 +1,6 @@
 .App {
   text-align: center;
+  .body_container {
+    padding-top: $header-height;
+  }
 }
