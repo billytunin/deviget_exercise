@@ -1,2 +1,2 @@
-# andicar_react_rework
-I'm working on Andicar's FE rework. I will migrate the vanilla JS to ReactJS
+# This repo was created to solve Deviget's coding challenge
+Remember to use ```npm start``` to start the local development environment
