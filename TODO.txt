@@ -1,0 +1,18 @@
+| ----------- [ORDENADOS POR PRIORIDAD] --------- |
+- cambiar el icono de fav-icon a una imagen mas linda, que no se estire, del logo.
+- hacer un jeite para que el image-viewer tenga el width de su imagen en 55vw si la foto es horizontal (la diff entre width y height para imagenes horizontales es 252. Y para horizontales-small es 126)
+- Hacer y subir un .min de cada cosa; y automatizar el upload al bucket de Amazon de alguna manera?
+- meter paginacion para el fetch las consultas
+- meter password para la pagina de articulos-nav o mostrar menos articulos para los usuarios que no estén logueados? (esto podria hacerlo sin meterle autenticacion a los endpoints que ya son publicos. Total, solo es para que la competencia no los vea)
+
+| ------------------------------------- --------- |
+
+--- EN DUDA ---
+- pasar los external resources que ahora traigo por CDN a algo local mejor? Me parece que cuando lo suba al host, va a andar mas rapido que el cliente pida esos recursos al host, que que el cliente pida esos recursos a la CDN que tiene miles de requests todo el tiempo.
+
+
+--- IDEAS ---
+- hacer un slider en algun lado que muestre articulos destacados que ellos quieran mostrar?
+- hacer un sistema de usuarios exclusivo para los clientes que ellos quieran. en ese caso podriamos cargar los precios de los articulos y que los vean solo los usuarios registrados.
+- hacer una pagina de bienvenida como dijo fede?
+- para esto necesito un diseñador: hacer que cada categoria tenga su propia imagen en .svg algun diseño asi. Y en articulos-nav se muestra "Categoria: [ese iconito}". Ademas, usaria iconitos/imagenes-livianas en las fotos del slide "Productos" en vez de imagenes mas pesadas.

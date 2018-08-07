@@ -1,0 +1,1 @@
+- pensar bien la estrategia de global-variables en SCSS para que no se repitan las reglas. Basarme en lo que hice en el exchange app.
