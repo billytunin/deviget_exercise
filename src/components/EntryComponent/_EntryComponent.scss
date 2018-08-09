@@ -1,3 +1,23 @@
 .EntryComponent {
-
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  background-color: rgba(195, 195, 195, 0.6);
+  border-radius: 12px;
+  cursor: pointer;
+  .header {
+    font-family: 'Nunito', sans-serif;
+    .unread_dot {
+      background-color: rgba(243, 177, 44, 1);
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      border-radius: 8px;
+    }
+  }
+  .thumbnail {
+    max-width: 140px;
+  }
+  .comments_counter {
+    display: block;
+  }
 }

@@ -1,3 +1,8 @@
 .ListComponent {
-
+  width: 30%;
+  background-color: $main-bg-color;
+  border-radius: $main-bg-radius;
+  .spinner {
+    width: 8vw;
+  }
 }

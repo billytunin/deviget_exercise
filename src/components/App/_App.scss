@@ -1,6 +1,12 @@
 .App {
   text-align: center;
+  background: url(assets/background.jpg) center 0 no-repeat;
+  height: 100vh;
+  overflow-y: scroll;
   .body_container {
-    padding-top: $header-height;
+    padding-top: calc(#{$header-height} + 30px);;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }

@@ -1,14 +1,41 @@
 /* Import global SCSS variables so they can be available on every other SCSS file imported below */
 @import '_global-variables.scss';
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Dosis:200,400,700|Nunito:200,400,800');
+
+/* FONTS USAGE */
+/*
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Dosis', sans-serif;
+*/
+
 /* [START] Global styles */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+h2 {
+  font-family: 'Do Hyeon', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+h3 {
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 /* [END] Global styles */
 
 @import './components/App/App.scss';
 @import './components/HeaderComponent/HeaderComponent.scss';
 @import './components/ListComponent/ListComponent.scss';
+@import './components/EntryComponent/EntryComponent.scss';
+@import './components/DetailsViewComponent/DetailsViewComponent.scss';
