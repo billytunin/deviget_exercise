@@ -1,7 +1,9 @@
 .DetailsViewComponent {
   background-color: $main-bg-color;
-  max-height: 80vh;
+  height: 80vh;
   overflow-y: scroll;
   border-radius: $main-bg-radius;
-  width: 60%;
+  width: 60vw;
+  position: fixed;
+  right: 3vw;
 }
