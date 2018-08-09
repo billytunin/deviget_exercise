@@ -1,23 +1,28 @@
 .EntryComponent {
+  position: relative;
   margin: 20px 0 20px 0;
   padding: 10px;
   background-color: rgba(195, 195, 195, 0.6);
   border-radius: 12px;
   cursor: pointer;
+  span {
+    display: block;
+    width: 70%;
+    margin: auto;
+  }
   .header {
     font-family: 'Nunito', sans-serif;
     .unread_dot {
       background-color: rgba(243, 177, 44, 1);
-      width: 8px;
-      height: 8px;
-      display: inline-block;
-      border-radius: 8px;
+      width: 11px;
+      height: 11px;
+      border-radius: 11px;
+      position: absolute;
+      top: 14px;
+      right: 14px;
     }
   }
   .thumbnail {
     max-width: 140px;
-  }
-  .comments_counter {
-    display: block;
   }
 }

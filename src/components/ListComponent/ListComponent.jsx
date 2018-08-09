@@ -33,11 +33,6 @@ class ListComponent extends Component {
     }
   }
 
-  updateSelectedEntry = (selected_entry) => {
-    console.log(selected_entry)
-    this.props.toggleNoEntrySelected()
-  }
-
   render() {
     return (
       <div className="ListComponent">
@@ -54,7 +49,7 @@ class ListComponent extends Component {
               date={element.data.created_utc}
               thumbnail={element.data.thumbnail}
               comments_counter={element.data.num_comments}
-              onClick={this.updateSelectedEntry.bind(this, element.data)}
+              onClick={this.props.updateSelectedEntry.bind(this, element.data)}
             >
             </EntryComponent>
           )

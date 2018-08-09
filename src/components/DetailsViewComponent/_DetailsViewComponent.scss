@@ -1,3 +1,5 @@
+$shared-bg-color: rgba(200, 200, 200, 0.2);
+$shared-border-radius: 10px;
 .DetailsViewComponent {
   background-color: $main-bg-color;
   height: 80vh;
@@ -6,4 +8,31 @@
   width: 60vw;
   position: fixed;
   right: 3vw;
+  .details_container {
+    .data_display {
+      width: 70%;
+      margin: auto;
+      background-color: $shared-bg-color;
+      border-radius: $shared-border-radius;
+      span {
+        display: block;
+      }
+    }
+    .thumbnail_container {
+      display: inline-block;
+      background-color: $shared-bg-color;
+      border-radius: $shared-border-radius;
+      padding: 10px;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: rgba(200, 200, 200, 0.5);
+      }
+      img {
+        border-radius: 10px;
+        &.is_default_thumbnail {
+          width: 140px;
+        }
+      }
+    }
+  }
 }

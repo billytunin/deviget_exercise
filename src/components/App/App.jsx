@@ -7,12 +7,12 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      no_entry_selected: true
+      selected_entry: null
     }
   }
 
-  toggleNoEntrySelected = () => {
-    this.setState({ no_entry_selected: !this.state.no_entry_selected })
+  updateSelectedEntry = (selected_entry) => {
+    this.setState({ selected_entry: selected_entry })
   }
 
   render() {
@@ -20,8 +20,8 @@ class App extends Component {
       <div className="App">
         <HeaderComponent></HeaderComponent>
         <div className="body_container">
-            <ListComponent toggleNoEntrySelected={this.toggleNoEntrySelected}></ListComponent>
-            <DetailsViewComponent no_entry_selected={this.state.no_entry_selected}></DetailsViewComponent>
+            <ListComponent updateSelectedEntry={this.updateSelectedEntry}></ListComponent>
+            <DetailsViewComponent selected_entry={this.state.selected_entry}></DetailsViewComponent>
         </div>
       </div>
     );
