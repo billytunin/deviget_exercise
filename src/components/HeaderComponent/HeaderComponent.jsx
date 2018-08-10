@@ -14,10 +14,11 @@ class HeaderComponent extends Component {
     return (
       <div className="HeaderComponent">
         <PaginationComponent
-        toggleLoadingEntries={this.props.toggleLoadingEntries}
-        updateEntriesList={this.props.updateEntriesList}
-      >
-      </PaginationComponent>
+          toggleLoadingEntries={this.props.toggleLoadingEntries}
+          updateEntriesList={this.props.updateEntriesList}
+        >
+        </PaginationComponent>
+        <button className="dismiss_all" onClick={this.props.cleanEntriesList.bind(this)}>Dismiss all entries</button>
         <img src={logo} className="logo" alt="logo" onClick={this.redirectToHome} />
       </div>
     );

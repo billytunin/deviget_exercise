@@ -1,3 +1,4 @@
+$no_entries_loaded_height: 10vh;
 .ListComponent {
   width: 30vw;
   margin-left: 3vw;
@@ -5,5 +6,26 @@
   border-radius: $main-bg-radius;
   .spinner {
     width: 8vw;
+  }
+  .entry-leave {
+    opacity: 1;
+    transform: translate(0,0,0);
+    transform: translate3d(0,0,0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
+  }
+  .entry-leave.entry-leave-active {
+    opacity: 0;
+    transform: translate(-250px,0);
+    transform: translate3d(-250px,0,0);
+  }
+  .no_entries_loaded {
+    min-height: $no_entries_loaded_height;
+    padding-bottom: 2vh;
+    h4 {
+      line-height: $no_entries_loaded_height;
+      margin: 0
+    }
   }
 }
