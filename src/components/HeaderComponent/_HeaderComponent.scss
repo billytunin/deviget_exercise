@@ -21,7 +21,16 @@
       background-color: rgba(200, 200, 200, 0.5);
     }
   }
-  .dismiss_all {
-    
+}
+
+/* [START] Mobile adaptation */
+@media (max-width: 768px) {
+  .HeaderComponent {
+    height: $mobile-header-height;
+    .logo {
+      left: unset;
+      right: 5vw;
+    }
   }
 }
+/* [END] Mobile adaptation */

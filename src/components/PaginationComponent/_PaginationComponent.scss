@@ -25,3 +25,12 @@
     }
   }
 }
+
+/* [START] Mobile adaptation */
+@media (max-width: 768px) {
+  .PaginationComponent {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+/* [END] Mobile adaptation */

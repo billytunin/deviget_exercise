@@ -9,3 +9,13 @@
     flex-wrap: wrap;
   }
 }
+
+/* [START] Mobile adaptation */
+@media (max-width: 768px) {
+  .App {
+    .body_container {
+      padding-top: calc(#{$mobile-header-height} + 22px);
+    }
+  }
+}
+/* [END] Mobile adaptation */

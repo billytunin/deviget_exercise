@@ -33,3 +33,11 @@ $no_entries_loaded_height: 10vh;
     }
   }
 }
+
+/* [START] Mobile adaptation */
+@media (max-width: 768px) {
+  .ListComponent {
+    width: 94vw;
+  }
+}
+/* [END] Mobile adaptation */
