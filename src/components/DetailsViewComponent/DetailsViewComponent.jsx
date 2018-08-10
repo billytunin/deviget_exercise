@@ -23,7 +23,6 @@ class DetailsViewComponent extends Component {
 
         {this.props.selected_entry &&
         <div className="details_container">
-          <h3>{this.props.selected_entry.title}</h3>
           <a className="thumbnail_container" href={this.props.selected_entry.url} target="_blank">
             <img
               className={is_default_thumbnail ? 'is_default_thumbnail' : ''}
@@ -32,6 +31,8 @@ class DetailsViewComponent extends Component {
             />
           </a>
           <div className="data_display">
+            <span className="caption">Title</span>
+            <span className="data">{this.props.selected_entry.title}</span>
             <span className="caption">Author</span>
             <span className="data">{this.props.selected_entry.author}</span>
             <span className="caption">Published date</span>

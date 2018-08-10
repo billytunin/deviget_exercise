@@ -28,19 +28,21 @@ class EntryComponent extends Component {
     return (
       <div className="EntryComponent">
         <div className="header">
-          <span>Posted by {this.props.author}</span>
-          <span>{this.formatDate(this.props.date)}</span>
+          <span className="posted_by">Posted by {this.props.author}</span>
+          <span className="date">{this.formatDate(this.props.date)}</span>
           <div className={`unread_dot ${this.state.read ? 'hide' : 'show'}`}></div>
         </div>
         <div className="body" onClick={this.componentClicked}>
           <h3>{this.props.title}</h3>
-          <img
-            src={is_default_thumbnail ? logo : this.props.thumbnail}
-            className="thumbnail" alt="thumbnail"
-          />
+          <div className="thumbnail_container">
+            <img
+              src={is_default_thumbnail ? logo : this.props.thumbnail}
+              className={`${is_default_thumbnail ? 'is_default_thumbnail' : ''}`} alt="thumbnail"
+            />
+          </div>
           <span className="comments_counter">Number of comments: {utils.numFormatter(this.props.comments_counter)}</span>
         </div>
-        <button className="dismiss_button" onClick={this.props.removeEntryFromList.bind(this, this.props.id)}>
+        <button className="dismiss_button btn btn-primary btn-sm" onClick={this.props.removeEntryFromList.bind(this, this.props.id)}>
           <i className="material-icons">close</i>
           Dismiss
         </button>

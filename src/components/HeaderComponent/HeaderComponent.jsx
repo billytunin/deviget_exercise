@@ -18,7 +18,7 @@ class HeaderComponent extends Component {
           updateEntriesList={this.props.updateEntriesList}
         >
         </PaginationComponent>
-        <button className="dismiss_all" onClick={this.props.cleanEntriesList.bind(this)}>Dismiss all entries</button>
+        <button className="dismiss_all btn btn-primary btn-sm" onClick={this.props.cleanEntriesList.bind(this)}>Dismiss all entries</button>
         <img src={logo} className="logo" alt="logo" onClick={this.redirectToHome} />
       </div>
     );

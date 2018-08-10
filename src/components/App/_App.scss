@@ -4,7 +4,7 @@
   height: 100vh;
   overflow-y: scroll;
   .body_container {
-    padding-top: calc(#{$header-height} + 30px);;
+    padding-top: calc(#{$header-height} + 30px);
     display: flex;
     flex-wrap: wrap;
   }

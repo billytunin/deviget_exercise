@@ -7,6 +7,10 @@ $no_entries_loaded_height: 10vh;
   .spinner {
     width: 8vw;
   }
+  h2 {
+    border-bottom: 1px solid black;
+    padding: 0.6vw;
+  }
   .entry-leave {
     opacity: 1;
     transform: translate(0,0,0);
