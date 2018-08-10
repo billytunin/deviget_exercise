@@ -15,7 +15,7 @@ class DetailsViewComponent extends Component {
                                ( this.props.selected_entry.thumbnail.startsWith('http://') || this.props.selected_entry.thumbnail.startsWith('https://') )
                                ? false : true
     return (
-      <div className={`DetailsViewComponent ${this.props.hide_details ? 'hide' : 'show'}`}>
+      <div className={`DetailsViewComponent`}>
 
         <div className={`no_entry_selected ${this.props.selected_entry ? 'hide' : 'show'}`}>
           <h3>Click any entry to view its details</h3>
