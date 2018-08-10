@@ -1,24 +1,4 @@
-.HeaderComponent {
-  position: fixed;
-  width: 100%;
-  height: $header-height;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: rgba(45, 45, 45, 0.55);
-  box-shadow: inset 0px -20px 100px -27px;
-  z-index: 20;
-  .logo {
-    position: fixed;
-    top: 10px;
-    width: 30px;
-    padding: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    &:hover {
-      background-color: rgba(200, 200, 200, 0.5);
-    }
-  }
+.PaginationComponent {
   .pagination {
     margin-bottom: 0;
     margin-top: 10px;

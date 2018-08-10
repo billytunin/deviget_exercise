@@ -10,8 +10,10 @@ class DetailsViewComponent extends Component {
   formatDate = (date) => moment.unix(date).format('MMMM Do YYYY, h:mm:ss A')
 
   render() {
-    console.log(this.props.selected_entry)
-    let is_default_thumbnail = this.props.selected_entry && (this.props.selected_entry.thumbnail === 'default' || this.props.selected_entry.thumbnail === 'self') ? true : false
+    let is_default_thumbnail = this.props.selected_entry &&
+                               typeof this.props.selected_entry.thumbnail === 'string' &&
+                               ( this.props.selected_entry.thumbnail.startsWith('http://') || this.props.selected_entry.thumbnail.startsWith('https://') )
+                               ? false : true
     return (
       <div className="DetailsViewComponent">
 

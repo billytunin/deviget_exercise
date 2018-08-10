@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import logo from './../../assets/logo.svg';
+import React, { Component } from 'react'
+import PaginationComponent from './../PaginationComponent/PaginationComponent.jsx'
+
+import logo from './../../assets/logo.svg'
 
 class HeaderComponent extends Component {
   redirectToHome = () => {
@@ -11,6 +13,11 @@ class HeaderComponent extends Component {
   render() {
     return (
       <div className="HeaderComponent">
+        <PaginationComponent
+        toggleLoadingEntries={this.props.toggleLoadingEntries}
+        updateEntriesList={this.props.updateEntriesList}
+      >
+      </PaginationComponent>
         <img src={logo} className="logo" alt="logo" onClick={this.redirectToHome} />
       </div>
     );
