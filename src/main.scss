@@ -20,6 +20,9 @@ body {
 *:focus {
   outline: none;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 h2 {
   font-family: 'Do Hyeon', sans-serif;
   text-transform: uppercase;

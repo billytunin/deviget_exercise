@@ -15,6 +15,15 @@
   .App {
     .body_container {
       padding-top: calc(#{$mobile-header-height} + 22px);
+      .modal_background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
     }
   }
 }

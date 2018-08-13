@@ -4,6 +4,10 @@ $no_entries_loaded_height: 10vh;
   margin-left: 3vw;
   background-color: $main-bg-color;
   border-radius: $main-bg-radius;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
   .spinner {
     width: 8vw;
   }

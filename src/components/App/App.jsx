@@ -31,11 +31,18 @@ class App extends Component {
   removeEntryFromList = (id) => {
     let new_entries_list = this.state.current_entries_list
     _.remove(new_entries_list, (element) => element.data.name === id)
-    this.setState({ current_entries_list: new_entries_list })
+
+
+    let new_selected_entry = this.state.selected_entry
+    if(new_selected_entry && new_selected_entry.name === id){
+      new_selected_entry = null      
+    }
+
+    this.setState({ current_entries_list: new_entries_list, selected_entry: new_selected_entry })
   }
 
   cleanEntriesList = () => {
-    this.setState({ current_entries_list: [] })
+    this.setState({ current_entries_list: [], selected_entry: null })
   }
 
   addSeenPost = (new_id) => {
@@ -64,7 +71,8 @@ class App extends Component {
               removeEntryFromList={this.removeEntryFromList}
             >
             </ListComponent>
-            <DetailsViewComponent selected_entry={this.state.selected_entry}></DetailsViewComponent>
+            <DetailsViewComponent selected_entry={this.state.selected_entry} updateSelectedEntry={this.updateSelectedEntry}></DetailsViewComponent>
+            <div className={`modal_background ${window.mobile_mode_activated && this.state.selected_entry ? 'show' : 'hide'}`}></div>
         </div>
       </div>
     );

@@ -9,17 +9,23 @@ class DetailsViewComponent extends Component {
 
   formatDate = (date) => moment.unix(date).format('MMMM Do YYYY, h:mm:ss A')
 
+  updateSelectedEntryToNone = () => {
+    this.props.updateSelectedEntry(null)
+  }
+
   render() {
     let is_default_thumbnail = this.props.selected_entry &&
                                typeof this.props.selected_entry.thumbnail === 'string' &&
                                ( this.props.selected_entry.thumbnail.startsWith('http://') || this.props.selected_entry.thumbnail.startsWith('https://') )
                                ? false : true
     return (
-      <div className={`DetailsViewComponent`}>
+      <div className={`DetailsViewComponent ${window.mobile_mode_activated && this.props.selected_entry === null ? 'hide' : 'show'}`}>
 
         <div className={`no_entry_selected ${this.props.selected_entry ? 'hide' : 'show'}`}>
           <h3>Click any entry to view its details</h3>
         </div>
+
+        <i className={`material-icons close_modal ${window.mobile_mode_activated ? 'show' : 'hide'}`} onClick={this.updateSelectedEntryToNone.bind(this)}>close</i>
 
         {this.props.selected_entry &&
         <div className="details_container">

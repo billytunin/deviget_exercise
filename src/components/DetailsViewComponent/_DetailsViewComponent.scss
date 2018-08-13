@@ -1,8 +1,11 @@
 $details-component-height: 80vh;
+$details-shared-light-gray: rgba(220, 220, 220, 0.4);
 .DetailsViewComponent {
   background-color: $main-bg-color;
   height: $details-component-height;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   border-radius: $main-bg-radius;
   padding: 15px;
   padding-top: 20px;
@@ -18,7 +21,7 @@ $details-component-height: 80vh;
       background-color: $shared-bg-color;
       border-radius: $shared-border-radius;
       .caption {
-        background-color: rgba(220, 220, 220, 0.4);
+        background-color: $details-shared-light-gray;
         &:first-child {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
@@ -34,6 +37,8 @@ $details-component-height: 80vh;
       }
       span {
         display: block;
+        padding-left: 8px;
+        padding-right: 8px;
       }
     }
     .thumbnail_container {
@@ -63,12 +68,30 @@ $details-component-height: 80vh;
 /* [START] Mobile adaptation */
 @media (max-width: 768px) {
   .DetailsViewComponent {
+    &:not(.show){
+      display: none;
+    }
     position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100vw;
-    height: 100vh;
+    top: 5vh;
+    left: 3vw;
+    width: 94vw;
+    height: 80vh;
+    z-index: 11;
+    i.close_modal {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 30px;
+      background-color: $details-shared-light-gray;
+      border-radius: 30px;
+      padding: 5px;
+      z-index: 12;
+    }
+    .details_container {
+      .data_display {
+        width: 90%;
+      }
+    }
   }
 }
 /* [END] Mobile adaptation */
